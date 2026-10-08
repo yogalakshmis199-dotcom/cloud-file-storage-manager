@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud File Storage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>☁️ Cloud File Storage</h1>
+    <p>Upload, manage and organize your files</p>
+</header>
+
+<main>
+
+    <section class="upload-box">
+        <h2>Upload File</h2>
+
+        <input type="file" id="fileInput">
+
+        <button onclick="uploadFile()">
+            ⬆️ Upload File
+        </button>
+
+        <p id="message"></p>
+    </section>
+
+
+    <section class="dashboard">
+
+        <div class="stat">
+            <h3 id="fileCount">0</h3>
+            <p>Total Files</p>
+        </div>
+
+        <div class="stat">
+            <h3 id="storage">0 KB</h3>
+            <p>Storage Used</p>
+        </div>
+
+    </section>
+
+
+    <section class="files-section">
+
+        <div class="section-header">
+            <h2>📁 My Files</h2>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search files..."
+                onkeyup="searchFiles()"
+            >
+        </div>
+
+        <div id="fileList"></div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Cloud File Storage Manager</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
